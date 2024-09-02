@@ -31,6 +31,10 @@ public class StudentService {
         return studentRepository.findAll();
     }
 
+    public Student getByEmail(String email){
+        return studentRepository.findByEmail(email);
+    }
+
     public Student getStudentById(Long id) {
         return studentRepository.findById(id).orElse(null);
     }
